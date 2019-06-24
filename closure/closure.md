@@ -48,33 +48,3 @@
 	storyOfMyLife.erase(); // ''
 
 	```
-
-1. Using the module pattern, design a toaster. Use your creativity here and think about what you want your users to be able to access on the outside of your toaster vs what you don't want them to be able to touch.
-
-	```javascript
-	var Toaster = function(){
-	    //some private methods and properties
-
-	    return {
-	      //some public methods and properties, etc
-	    };
-	};
-	```
-
-
-1. [EXTRA CREDIT] Use the module pattern to design a character in a Super Mario game. Think about what actions you can control in the game and other aspects you can't control directly (example:  you can only affect your health indirectly by eating a mushroom). If you are not familiar with Super Mario, choose another simple game for this example.
-
-1. [EXTRA CREDIT] Why doesn't the code below work? This is a function that should return an array of functions that console.log() each person's name as a string when invoked. Fiddle with this function and inspect how it works, then try to fix it using a closure. Be prepared to explain to a partner how it worked before, and how it works now with a closure.
-
-	```javascript
-	var checkAttendanceFunc = function(nameArr){
-		var resultArr = [];
-		for(var i = 0; i < nameArr.length; i++){
-			resultArr.push(function(){ console.log('Is', nameArr[i], 'present?', i)})
-		};
-		return resultArr;
-	};
-	```
-	Here is a hint: http://jsfiddle.net/PuEy6/
-
-1. [EXTRA CREDIT] Write a function that takes another function\* as an argument and creates a version of the function that can only be called one time. Repeated calls to the modified function will have no effect, returning the value from the original call. How could you do this without using a closure? Is it even possible? How could you do this with a closure? \*Note: This original input function should *not* have any parameters.
