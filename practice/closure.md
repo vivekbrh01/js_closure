@@ -5,6 +5,13 @@
 ```js
 // Your code goes here
 
+function multiplyBy (factor) {
+  function double (a) {
+    let double = a * a;
+    
+    console.log(`${double}`);
+  };
+};
 const double = multiplyBy(2);
 const final = double(15); // final should be 30
 ```
@@ -13,7 +20,12 @@ const final = double(15); // final should be 30
 
 ```js
 // Your code goes here
-
+function fullName (firstName) {
+  function surname (lastName) {
+    return firstName + lastName
+  }
+  return surname;
+}
 const name = fullName("Will");
 const final = name("Smith"); // final should be "Will Smith"
 ```
@@ -23,6 +35,14 @@ const final = name("Smith"); // final should be "Will Smith"
 ```js
 function isInBetween(a, b) {
   // your code goes here
+  function limits(e) {
+    if (e >= a && e <= b) {
+      return true;
+    } else {
+      return false;
+    }
+    return limits;
+  }
 }
 
 const isChild = isInBetween(10, 100);
@@ -36,6 +56,10 @@ isChild(103); // false
 ```js
 function letsWishThem(greeting) {
   // your code goes here
+  function weGreet (e){
+    return greeting + ' ' + e; 
+  }
+  return weGreet;
 }
 
 const callWithHey = letsWishThem("Hey");
@@ -49,6 +73,18 @@ callWithHello("How Are You?"); // Hello How Are You?
 ```js
 function addGame(gameName) {
   // your code goes here
+
+  let scoreOf = 0;
+
+  function scoreOfGame() {
+    scoreOf++;
+
+    console.log(`Your score of ${gameName} is ${scoreOf}`);
+
+  } 
+
+  return scoreOfGame;
+
 }
 
 // Output
@@ -65,13 +101,19 @@ cricket(); // Your score of Cricket is 2
 ```js
 function getCard(suit) {
   // your code goes here
+  let array = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
+  function aceOf(){ 
+    let num = Math.floor(Math.random() * 13);
+    console.log(`Card is: ${array[num]} ${suit}`); 
+  }
+  return aceOf;
 }
 
 // Output
-const randomClub = addGame("Club");
+const randomClub = getCard("Club");
 randomClub(); // Card is: 6 Club
 randomClub(); // Card is: A Club
-const randomSpade = addGame("Spade");
+const randomSpade = getCard("Spade");
 randomSpade(); // Card is: 6 Spade
 randomSpade(); // Card is: A Spade
 ```

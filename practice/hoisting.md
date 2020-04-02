@@ -6,18 +6,24 @@
 console.log(animal);
 var animal = "monkey";
 // Output or Error Message
+// Valid 
+// Output: undefined
 ```
 
 ```js
 console.log(animal);
 let animal = "monkey";
 // Output or Error Message
+// Invalid
+// Output: let does not initialise the variable. Therefore cannot be used in this case.
 ```
 
 ```js
 console.log(animal);
 const animal = "monkey";
 // Output or Error Message
+// Invalid
+// Output: const does not initialise the variable. Therefore cannot be used before exection. 
 ```
 
 ```js
@@ -26,6 +32,8 @@ function sayHello(msg) {
 }
 sayHello("Hey Everyone");
 // Output or Error Message
+// Valid
+// Output: Hey Everyone
 ```
 
 ```js
@@ -34,6 +42,8 @@ function sayHello(msg) {
   alert(msg);
 }
 // Output or Error Message
+// Valid
+// Output: Hey Everyone
 ```
 
 ```js
@@ -42,6 +52,8 @@ var sayHello = msg => {
   alert(msg);
 };
 // Output or Error Message
+// Valid
+// Output: Hey Everyone
 ```
 
 ```js
@@ -49,4 +61,8 @@ sayHello("Hey Everyone");
 let sayHello = msg => {
   alert(msg);
 };
+// Output or Error Message
+// Invalid
+// Output: Since let does not initialise the variable. Therefore, canot be used called before execution.
+
 ```
